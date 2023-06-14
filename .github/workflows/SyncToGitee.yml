@@ -1,4 +1,4 @@
-name: Sync To Gitee Repo
+name: Sync To Gitee test-sync-with-github
 
 on: [ push, delete, create ]
 
@@ -10,7 +10,7 @@ jobs:
         uses: wearerequired/git-mirror-action@master
         env:
           # 注意在 Settings->Secrets 配置 GITEE_RSA_PRIVATE_KEY
-          SSH_PRIVATE_KEY: ${{ secrets.GITEE_RSA_PRIVATE_KEY }}
+          SSH_PRIVATE_KEY: ${{ secrets.GITEE_PRIVATE_KEY_01 }}
         with:
           # 注意替换为你的 GitHub 源仓库地址
           source-repo: git@github.com:tigerdahuacao/hexo-blog.git
